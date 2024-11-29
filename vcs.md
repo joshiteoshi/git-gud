@@ -26,6 +26,20 @@
      - saving space (tbc)
    - this part does not cover commands; it's an introduction to git concepts
  - how can we use git?
+   - git's command line interface
+     - init and clone
+     - add and commit
+     - checkout and branch
+     - status, log, and reflog
+     - diff
+   - working with other people
+     - push, merge, fetch, and pull
+     - github?
+   - when everything is borked
+     - reset and clean
+     - bisect and grep
+     - giving up
+   - this part has a "playground" repository to try out the commands and mess with stuff
  - where to from here?
    - alternative vcs?
    - git repository hosting platforms
