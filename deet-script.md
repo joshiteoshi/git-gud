@@ -9,40 +9,35 @@
 
 ### what is git?
 
-git is a version control system (vcs).
-in fact for many people, vcs is git (has anyone even heard of subversion or mercurial?).
-unless you work for facebook (which made its own vcs), you'll probably have to use git.
-
- - git helps people keep track of versions of a project directory
- - this can be *any* type of project
- - but most frequently, it is used with software projects
-   - its original version was made by linus torvalds, the linux kernel man
-   - in fact it was made for linux kernel development
-
-but what does "keep track of versions" mean?
-here's a list of things git can do:
-
- - save a "snapshot" of your current work
-   - like a checkpoint or save slot in skyrim
- - make new "branches" to work on experimental changes you don't want in the main project
- - merge branches when new features are ready
- - identify a snapshot which introduced a bug
- - use git diff to find the buggy code
- - use git blame to figure out who introduced buggy code
- - and like several hundred other things
-
-when working on a software project over a period of time, git helps make sure things don't break.
-if changes are made, you can always revive previous versions.
-git also enables better collaboration on projects.
-multiple changes made by individuals can be quickly reconciled and applied to a project.
-
-some of the other (nice but maybe less important to us) features of git.
-
- - nyoom.
- - nyoom.
- - it's fast (compared to other vcs, for most operations)
- - it's distributed - so many different team workflows are supported
- - there's lots of git repository hosting services
+ - git is a version control system (vcs) software
+   - in fact for many people, vcs is git (does any one know svn or hg?)
+   - unless you work for facebook, you'll use git
+ - git helps track versions of a project directory
+   - this can be *any* type of project
+   - but usually, git is used with software projects
+     - the original version was written by linus torvalds, the linux kernel man
+     - in fact, git was made for linux kernel development
+ - what does "track versions" mean? git can
+   - save "snapshots" of your current work
+     - like a save in skyrim
+   - make new "branches" to work on experimental changes or new features
+   - merge branches when new features are ready
+   - identify snapshots which introduced bugs
+   - use diff to find buggy code
+   - use blame to find who wrote buggy code
+   - and several hundred other things
+ - benefits
+   - when working on a project over time, git helps make sure things don't break
+   - if changes are made, you can always restore previous versions
+   - collaborating on projects is made easier
+   - multiple conflicting changes can be quickly reconciled
+ - some other features (which distinguish it from other vcs)
+   - nyoom (it's fast, compared to other vcs in many operations)
+   - it's distributed - so many team workflows are supported
+   - there's good support
+     - easy to google problems
+     - lots of gui tools
+     - lots of repository hosting services
 
 ### how does git work?
 
