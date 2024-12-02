@@ -20,8 +20,6 @@
 
 ### what is git?
 
-// do we need a section for everyone to just install git?
-
 git is a version control system (vcs).
 in fact for many people, vcs is git (has anyone even heard of subversion or mercurial?).
 unless you work for facebook (which made its own vcs), you'll probably have to use git.
@@ -58,11 +56,6 @@ some of the other (nice but maybe less important to us) features of git.
  - there's lots of git repository hosting services
 
 ### how does git work?
-
-// maybe discuss the model first and how to manipulate it?
-// this should not cover specific commands yet; thats for the how to use section
-
-// working idea is to follow the git parable (there is also a presentation version that can help)
 
 to introduce how git works, i am going to steal from a presentation, which stole from a great blog post.
 mostly because its a great introduction to git which helped me understand it better.
@@ -217,13 +210,101 @@ after some time, timo complains about the file space use of your vcs.
 
 ### how can we use git?
 
-knowing how it works, we can look at how git is used.
-there are 2 ways to use git, from its command line interface or with a gui.
-for this workshop, we will use the command line.
-but i will also recommend some gui options, some of which you might already use.
+ - install git time (if people don't have it installed)
+ - introduction to git cli
+   - gui options discussed later
+   - some time to familiarise if people are unfamiliar with terminal emulators
+ - show and try various commands
+   - need a playground repository for this
 
-// i should make a playground repository for this
-// actually maybe just use this repository
+#### init & clone
+
+ - 2 ways to initialise a git repository
+   - init > initialise a new repository with no commits, branches etc.
+   - clone > copy an existing repository including commits, branches etc.
+ - repositories are just special directories that git can operate on and track
+ - exercise:
+   - try cloning this repository
+
+#### add & commit
+
+you can look through the course repository if you like.
+// add an example here of how to stage and commit changes
+// i'm thinking of including either tex or mdbook course notes so maybe participants can look for improvements and add those
+
+#### checkout & branch
+
+ - implementing changes or features commonly done on braches besides main
+   - main technically is a branch
+   - but most teams treat it as privileged, which is good practice
+ - as discussed, branches are just named commits (or pointers to commits)
+ - 2 (3) ways to make new branches
+   - branch > creates a new branch
+   - checkout -b > create a new branch and "select" it
+   - switch -c > see checkout -b
+ - when commiting to a branch, the branch's pointer moves to the new commit
+ - at any given time, a commit is "selected" as the `HEAD`
+   - if you haven't touched anything, the files in the directory will reflect the state of the file system at that commit
+   - checkout moves the head around
+   - checkout -b makes a new branch and "selects" it, moving the `HEAD` to the commit
+ - exercise:
+   - make a new branch and commit a change
+
+#### status, log, & reflog
+
+ - between commits, staging areas, and the working area, it's hard to remember what is happening all the time
+ - git provides tools to figure out what is happening at any given moment
+   - status > gives information about the current branch, comparison with origin, diff between working and staged
+   - log > shows the commit history (of the branch or project depending on flags)
+   - reflog > records branch tip and `HEAD` changes (this is very useful when stuff breaks)
+ - exercise:
+   - try all the commands and decipher the output
+
+#### diff
+
+// i need to actually research how to use this one since i never have
+
+#### collaboration
+
+// some way to demonstrate or use push, merge, fetch, and pull
+// probably through github
+
+#### reset, revert, and clean
+
+ - for when git breaks
+ - 2 ways to undo changes
+   - reset > undoes a set of commits
+     - this will break more things if changes are already pushed to remote
+   - revert > makes a new commit which undoes the changes of a previous one
+     - this is safe to do if changes are pushed
+     - the reverts are considered "new changes"
+ - clean helps if there are a bunch of unwanted files
+   - removes untracked files from the current repository
+ - exercise
+   - TODO
+
+#### bisect & grep
+
+ - for when your project breaks
+ - bisect > search for a commit which introduced a "bad change"
+   - select a known "bad" commit and "good" commit
+   - binary search to find the first "bad" commit
+ - grep > search for a pattern in a work tree, blobs in index file, or blobs in a tree
+   - search for a regular expression pattern
+   - kinda like the `grep` command but fashioned for git use
+   - TODO: need examples for this probably
+ - exercise:
+   - TODO
+
+#### giving up
+
+ - when everything is truly, completely screwed
+ - [relevant xkcd](https://xkcd.com/1597/)
+ - if you really cannot fix whatever you did to your repository
+   - save your changes somewhere else
+   - `rm -rf ./*`
+   - re-clone the repository from origin
+ - there is no exercise for this; but still somehow the most useful advice i can give
 
 ### where to from here?
 
@@ -233,11 +314,28 @@ here is a list of things we did not cover:
    - you can probably go your entire professional career without anything else
    - but it's fun to explore different tech
    - and maybe you'll like another vcs for your workflow better
+   - some other ones
+     - helix core - standard (?) in game development
+     - subversion - better (?) for projects with non-code elements
+     - mercurial - distributed like git, but i don't know if anyone uses this
  - remote hosting / git repository hosting services
    - i don't have to tell you about github
    - everyone knows what github is
    - but there are other hosting services (my internship used bitbucket)
    - some have extra features on top that you might like
+   - some other services
+     - gitlab - devops platform (whatever that means) + repository hosting
+     - bitbucket - i hate you
+     - github - you already have an account
+ - git gui tools
+   - commands are not always easy to remember
+   - it is good to get used to the command line
+   - but if you don't want to, or like being able to visualise source trees
+   - some gui tools
+     - github desktop - you already have this installed
+     - git-gui / gitk - these come with git and look like ms-dos
+     - lazygit - this one is terminal-based but makes complicated stuff a bit easier
+   - i don't have any other recommendations but there's a list on the git website
 
 ## references
 
