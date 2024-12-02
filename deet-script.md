@@ -281,6 +281,10 @@ you can look through the course repository if you like.
 
 here is a list of things we did not cover:
 
+ - .gitignore files
+   - typical in project directories
+   - used typically to hide project secrets (api access keys/key data files/intermediate files that are not impt)
+   - <timo needs to add more here but his brain isnt working\>
  - alternatives vcs
    - you can probably go your entire professional career without anything else
    - but it's fun to explore different tech
