@@ -11,6 +11,16 @@
    - no one knows what diff, bisect, reflog, etc. do
  - this course is an attempt to (1) teach git and (2) bridge the gap in knowledge
 
+## objectives
+
+ - by the end of the workshop, attendees should be able to
+   - define "version control system" and explain why programmers use vcs software
+     - list examples of vcs software besides git
+   - describe git's underlying data-representation model
+   - use a selection of git commands and explain how they interact with git's data model
+   - select git gui software and repository hosting services to support their workflow
+   - know roughly what to google when things break
+
 ## lesson plan
 
  - what is git?
@@ -53,3 +63,5 @@
  - [the missing semester of your cs education](https://missing.csail.mit.edu/2020/version-control/)
  - [git magic](https://www-cs-students.stanford.edu/~blynn/gitmagic/pr01.html)
  - [oh shit, git?](https://ohshitgit.com/)
+
+ - [learn git branching](https://learngitbranching.js.org/)
