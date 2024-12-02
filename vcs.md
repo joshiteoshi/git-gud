@@ -46,7 +46,7 @@
      - push, merge, fetch, and pull
      - github?
    - when everything is borked
-     - reset and clean
+     - reset, revert, and clean
      - bisect and grep
      - giving up
    - this part has a "playground" repository to try out the commands and mess with stuff
