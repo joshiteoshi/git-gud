@@ -235,11 +235,29 @@ TODO: add example of how to stage and commit changes, possibly as files in this 
 
 #### diff
 
-TODO: research how `git diff` works cos i've actually never used it
+ - also between commits, staging areas, and the working area, it is hard to remember the chnages made between different areas
+ - git diff runs a diffing algorithm to tell you the differences between specified files in different areas
+ - there are several ways to use git diff
+   - `git diff <path>` gives the difference between the <path> in the working area and staging area
+   - `git diff --staged <path>` gives the difference between the <path> in the staging area and last commit
+     - equivalent to `git diff --cached` because git gives 20 ways to do the same thing
+   - `git diff <commit>..<commit> <path>` gives the difference between the <path> in 2 different commits
+ - <path> can be omitted if you want to see all differences between all files
+ - there is a lot more that git diff can do, see git documentation for more uses
+ - exercise:
+   - make some changes and see the difference between the staging area and working area with git diff
+     - also try `git diff --staged` to see there is no difference between the staging area and last commit
+   - use `git add` to stage the changes and try both diffs again to see the changes between areas
+   - use `git commit` to commit the changes try `git diff <commit>..<commit>` to see the difference between your new commit and the previous one
 
 #### collaboration
 
-TODO: figure out how to demonstrate push, merge, fetch, and pull, possibly through github
+ - i don't want to sit around while everyone figures out github so this will be done locally
+ - introduction to push, merge, fetch, and pull
+ - setup:
+   - find a random directory (or make a new one) and do `git init`
+   - `cd` somewhere else and `git clone` the other directory to make it remote
+ - TODO: determine if there is a better, non-github way to do this
 
 #### reset, revert, and clean
 
@@ -264,9 +282,12 @@ TODO: figure out how to demonstrate push, merge, fetch, and pull, possibly throu
  - grep > search for a pattern in a work tree, blobs in index file, or blobs in a tree
    - search for a regular expression pattern
    - kinda like the `grep` command but fashioned for git use
-   - TODO: need examples for this probably
+   - `git grep <pattern>` searches the working area for <pattern>
+     - use `--cached` to search the staging area
+   - if you've never used `grep` before, you might want to read about regular expressions
  - exercise:
-   - TODO
+   - try bisect (you don't have to find any bug just give it a try)
+   - search for any pattern in the working area using grep
 
 #### giving up
 
