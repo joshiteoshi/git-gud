@@ -43,11 +43,11 @@
 
  - introduction to git, stolen from a presentation, which stole from a great blog post
  - the git parable
-   - mostly presented as a story, but important elements are marked [!]
+   - mostly presented as a story, but important elements are marked !
    - imagine you wanted to build a large piece of software but vcs doesn't yet exist
    - all your computer has is a text editor and some basic file system commands
    - unlike the real you, fake you is responsible and feels there should be a system to track code changes
-   - [!] you need a way to retrieve code changes and deletions
+   - ! you need a way to retrieve code changes and deletions
 
 #### snapshots
 
@@ -58,7 +58,7 @@
      - keeps a photo album of the photos taken
      - images trace her daughter's history
      - help her remember what her daughter was like in each moment in time
- - [!] idea for vcs
+ - ! idea for vcs
    - snapshots, an image of your codebase is what you need for version control
      - you can make copies of your codebase each time you made a change
      - and thus review old changes on demand
@@ -88,7 +88,7 @@
    - you decide to take a walk - studies show exposure to nature refreshes the mind
    - you observe the trees and follow their branches
    - no matter where on the tree you are, you can always trace the branches back to the trunk
- - [!] this is a great way to track multiple development paths
+ - ! this is a great way to track multiple development paths
    - rather than thinking about code history linearly, think of it as a tree graph
    - snapshots do not necessarily follow each other numerically
    - but the parent of each snapshot can be recorded in `message`
@@ -97,7 +97,7 @@
    - we don't know what the latest version on each tree branch is anymore
    - `snapshot-110` could be the latest snapshot on any branch
    - we could add "branch names" to each snapshot, but that doesn't really help figure out the latest snapshot
- - [!] solution
+ - ! solution
    - the minimum information to identify a snapshot's branch is the newest snapshot on the branch
    - the rest of the snapshots can be traced by following the parents
    - outside of the snapshot directories, you make a `branches` file
@@ -118,11 +118,11 @@
    - when you both meet again, you find a critical flaw in your vcs
      - both of your computers have different snapshots with identical names
      - no one can tell who wrote each snapshot
- - [!] the naming system has to be rethought
+ - ! the naming system has to be rethought
    - to identify authors, you both include the author and author's emails in snapshot `message` files
    - to name each snapshot, you hash the `message` of each snapshot and use that as the name
      - you decide to use the sha1 algorithm which produces a 40 character output
-     - [!] this gives the snapshot a unique name, since hashes do not\* collide
+     - ! this gives the snapshot a unique name, since hashes do not\* collide
  - story continue continues
    - because of the new system, work can now be decentralised
    - your friend takes long trips without internet and can make any number of snapshots
@@ -130,7 +130,7 @@
    - before a trip, both you and your friend start working on a `parsers` branch
      - they work on a very complex html parser
      - you work on a very simple css parser
- - [!] merging
+ - ! merging
    - when he returns, you have the task of merging both your works
    - the next snapshot created is special
      - it does not contain any new changes (except to reconcile yours and their snapshots)
@@ -144,7 +144,7 @@
    - the next morning, you review your code
      - it's ok, but some early changes are a bit emabrrasing and corrected later on
      - you want to turn your messy snapshots into 2 clean snapshots
- - [!] rewriting history
+ - ! rewriting history
    - taking your newest snapshot, you revert some of the changes
      - but instead of making the drunk snapshot the parent
      - you choose a snapshot from before your fun night
@@ -156,12 +156,12 @@
    - the encounter also made you realise something else
    - sometimes, you'll hop around the project, working on different things
    - changes are then made on different features which should really be 2 different snapshots
- - [!] staging
+ - ! staging
    - to resolve this, you introduce a `staging` directory
    - rather than taking snapshots of `working`, you move changes you want in the next snapshot to `staging` first
      - then, you take snapshots of `staging` instead
      - if you change something in `working` that should not be in the next snapshot, simply disinclude its change `staging`
- - [!] too many directories
+ - ! too many directories
    - with so many different directories (ie `working`, `staging`, `snapshot-X`), it's hard to track what changed
      - `message` files are nice, but only give summaries
    - to get a full list of changes, you write a "diffing" algorithm to compare versions of any files
@@ -172,6 +172,8 @@ after some time, timo complains about the file space use of your vcs.
 
  - many snapshots have almost identical copies of the same files
  - it feels a bit wasteful
+
+TODO: decide if this part of the git parable is necessary
 
 // i'm not sure if i want to discuss this since this doesn't really help use git
 
@@ -199,8 +201,8 @@ after some time, timo complains about the file space use of your vcs.
 
 #### add & commit
 
-you can look through the course repository if you like.
-// add an example here of how to stage and commit changes
+TODO: add example of how to stage and commit changes, possibly as files in this repo
+
 // i'm thinking of including either tex or mdbook course notes so maybe participants can look for improvements and add those
 
 #### checkout & branch
@@ -233,12 +235,11 @@ you can look through the course repository if you like.
 
 #### diff
 
-// i need to actually research how to use this one since i never have
+TODO: research how `git diff` works cos i've actually never used it
 
 #### collaboration
 
-// some way to demonstrate or use push, merge, fetch, and pull
-// probably through github
+TODO: figure out how to demonstrate push, merge, fetch, and pull, possibly through github
 
 #### reset, revert, and clean
 
