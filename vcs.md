@@ -39,7 +39,7 @@
    - git's command line interface
      - init and clone
      - add and commit
-     - checkout and branch
+     - checkout, branch, and tag
      - status, log, and reflog
      - diff
    - working with other people

@@ -104,6 +104,14 @@
      - this contains `name : snapshot` pairs, pointing each branch name to the newest snapshot on the branch
      - each time a new snapshot on a branch is made, you update `branches`
      - a minor inconvenience for making branches and snapshots easy to track
+ - ! and another thing
+   - after using branches for a bit, you realise another use for them
+   - since they are just pointers to snapshots, branches can also be used to mark unmoving points of interest
+     - for example, release versions
+   - these differ from the usual branches in that they do not move
+   - thus, you seperate them from the usual branches
+     - you make a new `tags` file
+     - and move all the "branches" used as labels to the `tags` file instead
 
 #### distributed development
 
@@ -205,7 +213,7 @@ TODO: add example of how to stage and commit changes, possibly as files in this 
 
 // i'm thinking of including either tex or mdbook course notes so maybe participants can look for improvements and add those
 
-#### checkout & branch
+#### checkout, branch, & tag
 
  - implementing changes or features commonly done on braches besides main
    - main technically is a branch
@@ -220,6 +228,10 @@ TODO: add example of how to stage and commit changes, possibly as files in this 
    - if you haven't touched anything, the files in the directory will reflect the state of the file system at that commit
    - checkout moves the head around
    - checkout -b makes a new branch and "selects" it, moving the `HEAD` to the commit
+ - also as discussed, tags can be made to record points of interest in the commit tree
+ - git supports 2 kinds of tags:
+   - lightweight > `git tag <name>` makes a simple named tag
+   - annotated > `git tag -a <name> -m <annotation>` makes a tag with a brief description
  - exercise:
    - make a new branch and commit a change
 
