@@ -209,6 +209,19 @@ TODO: decide if this part of the git parable is necessary
 
 #### add & commit
 
+ - as discussed, git represents the change history as a tree of commits
+ - new commits are added using `git commit`
+   - only changes which are staged with `git add` will be added to the new commit
+   - or you can use `git commit -a` to add and commit all "tracked" files
+     - ie this will stage and commit changes and deletions to all files but not new files
+ - commits require a commit message (except in certain situations which we won't cover)
+   - running `git commit` will bring up a text editor for you to add the message
+     - this is sometimes vi or nano depending on your system
+     - the default can be changed using `git config --global core.editor <editor>`
+   - alternatively, you can specify your message in the command with `git commit -m <msg>`
+ - exercise:
+   - TODO
+
 TODO: add example of how to stage and commit changes, possibly as files in this repo
 
 // i'm thinking of including either tex or mdbook course notes so maybe participants can look for improvements and add those
