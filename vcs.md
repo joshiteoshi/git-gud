@@ -1,6 +1,4 @@
 # git gud lesson plan
-swww
-
 
 ## motivation
 
