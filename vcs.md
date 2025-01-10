@@ -56,6 +56,11 @@
    - various other git commands
    - recommendation for further reading
 
+## material
+
+ - [slides 0](https://www.canva.com/design/DAGbe06PeE4/hVvKoOrH4PY36i6xq6SlBQ/edit?utm_content=DAGbe06PeE4&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+ - [slides 1](https://www.canva.com/design/DAGbl_Zc-ik/-Q8rzUYKupW5T8ndcHOdSw/edit?utm_content=DAGbl_Zc-ik&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 ## references
 
  - [the git parable](https://tom.preston-werner.com/2009/05/19/the-git-parable)
